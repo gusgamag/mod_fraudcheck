@@ -125,6 +125,7 @@ Server starts on:
 -   Unit tests for fraud rules
 -   Aggregation tests for FraudCheckService
 -   No persistence or network calls in tests
+-  [Postman project] (https://.postman.co/workspace/My-Workspace~9bd0317c-7f59-4a45-8910-6f33eec85870/folder/6245111-a9dc3868-6080-4edf-962e-9c0195d6f07d?action=share&creator=6245111&active-environment=6245111-2e1c9cfb-b614-4c1f-99cb-b38a88ba1729)
  
 Run tests:
 
@@ -137,3 +138,4 @@ Run tests:
 
 This service provides an extensible fraud detection core exposed
 via a minimal REST API. 
+
