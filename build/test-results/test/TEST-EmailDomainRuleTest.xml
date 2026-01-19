@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EmailDomainRuleTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-01-19T14:21:23" hostname="BIFROST" time="0.023">
+  <properties/>
+  <testcase name="shouldPassWhenEmailIsValidAndNotBlacklisted()" classname="EmailDomainRuleTest" time="0.014"/>
+  <testcase name="shouldNormalizeEmailBeforeValidation()" classname="EmailDomainRuleTest" time="0.001"/>
+  <testcase name="shouldMarkFraudWhenEmailIsNull()" classname="EmailDomainRuleTest" time="0.001"/>
+  <testcase name="shouldMarkFraudWhenEmailDomainIsBlacklisted()" classname="EmailDomainRuleTest" time="0.001"/>
+  <testcase name="shouldMarkFraudWhenEmailIsEmpty()" classname="EmailDomainRuleTest" time="0.001"/>
+  <testcase name="shouldMarkFraudWhenEmailFormatIsInvalid()" classname="EmailDomainRuleTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

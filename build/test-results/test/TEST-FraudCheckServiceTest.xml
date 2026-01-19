@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FraudCheckServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-01-19T14:21:23" hostname="BIFROST" time="0.006">
+  <properties/>
+  <testcase name="shouldReturnNonFraudulentWhenNoRulesMatch()" classname="FraudCheckServiceTest" time="0.001"/>
+  <testcase name="shouldAggregateMultipleFraudReasons()" classname="FraudCheckServiceTest" time="0.0"/>
+  <testcase name="shouldReturnFraudulentWhenSingleRuleMatches()" classname="FraudCheckServiceTest" time="0.0"/>
+  <testcase name="shouldEvaluateAllRulesEvenIfOneMatches()" classname="FraudCheckServiceTest" time="0.0"/>
+  <testcase name="shouldThrowExceptionWhenRulesListIsNull()" classname="FraudCheckServiceTest" time="0.001"/>
+  <testcase name="shouldThrowExceptionWhenUserIsNull()" classname="FraudCheckServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
