@@ -1,0 +1,84 @@
+openapi: 3.0.3
+info:
+  title: User Fraud Check Service
+  description: >
+    Lightweight user fraud detection service implemented in pure Java.
+    Exposes a REST API to evaluate whether a user is potentially fraudulent
+    using a rule-based approach.
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+
+paths:
+  /fraud-check:
+    post:
+      summary: Evaluate user for potential fraud
+      description: >
+        Evaluates a user against a set of fraud detection rules and returns
+        an explainable fraud result.
+      operationId: checkUserFraud
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+            example:
+              id: "1"
+              email: "test@mailinator.com"
+              phone: "+521234567890"
+      responses:
+        "200":
+          description: Fraud evaluation completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FraudResult"
+              example:
+                fraud: true
+                reasons:
+                  - Blacklisted email domain
+                  - Invalid phone format
+        "400":
+          description: Invalid request payload
+        "405":
+          description: Method not allowed (only POST supported)
+
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - email
+        - phone
+      properties:
+        id:
+          type: string
+          description: Unique user identifier
+          example: "1"
+        email:
+          type: string
+          description: User email address
+          example: "test@mailinator.com"
+        phone:
+          type: string
+          description: User phone number in international format
+          example: "+521234567890"
+
+    FraudResult:
+      type: object
+      properties:
+        fraud:
+          type: boolean
+          description: Indicates whether the user is considered fraudulent
+          example: true
+        reasons:
+          type: array
+          description: List of fraud reasons detected by the rules
+          items:
+            type: string
+          example:
+            - Blacklisted email domain
+            - Invalid phone format
